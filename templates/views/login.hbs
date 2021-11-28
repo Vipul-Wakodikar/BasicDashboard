@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{>headers}}
+
+</head>
+
+<body>
+    <form action="/login" method="post">
+    <div class = "registration-body">
+        <div class = "name-registration">
+            <label>User Name</label>
+            <input type="text" name = "username" placeholder="user name" required/>
+        </div>
+        <div class = "name-registration">
+            <label>Password</label>
+            <input type="password" name = "password" placeholder="password" required />
+        </div>
+        <div class = "name-registration">
+            <input type="submit" value="Sign-In" class = "submit-button"/>
+        </div>
+        <div class = "name-registration">
+            <a href = "/register" class = "register-button">Create an account</a>
+        </div>
+        </div>
+    </form>
+</body>

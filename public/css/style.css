@@ -1,0 +1,48 @@
+h1{
+    color: red;
+}
+.name-registration{
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.welcome{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:deepskyblue;
+}
+
+.registration-body{
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    padding: 30px;
+    border: 1px solid silver;
+    width: max-content;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.name-registration input{
+    justify-content: center;
+    margin-left: 5%;
+}
+.register-button{
+    padding: 2px;
+    border-radius: 20px;
+    background-color: white;
+    color: 007FFF;
+}
+.submit-button{
+    padding: 2px;
+    border-color: #007FFF;
+    border-radius: 20px;
+    background-color: #007FFF;
+    width: 200px;
+    color: white;
+}
+.submit-button:hover{
+    background-color: #007aaa;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}

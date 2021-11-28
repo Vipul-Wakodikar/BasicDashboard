@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{>headers}}
+    
+</head>
+<body>
+<form action = "/register" method="post">
+    <div class = "registration-body">
+        <div  class="name-registration">
+            <label>create userName</label>
+            <input type="text" name = "username" placeholder="new user name" required/>
+        </div>
+        <br />
+        <div  class="name-registration">
+        <label>create Password</label>
+        <input type="password" name = "password" placeholder="password"required/>
+        </div>
+        <br />
+        <div  class="name-registration">
+        <label>confirm Password</label>
+        <input type="password" name = "confirmpassword" placeholder="retype password" required/>
+        </div>
+        <div class="name-registration">
+            <select name = "role"required>
+                <option name = "user" value="user">user</option>
+                <option name = "moderator" value="moderator">moderator</option>
+                <option name = "admin" value="admin">admin</option>
+            </select>
+        </div>
+        <div class="name-registration">
+            <input type="submit" value="Register" class = "submit-button"/>
+        </div>
+        <div class = "name-registration">
+            <label>Already have an account?</label><a href="/login" class = "register-button">go to sign in</a>
+        </div>
+    </div>
+</form>
+</body>
+</html>

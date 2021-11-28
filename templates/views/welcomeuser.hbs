@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        {{>navbar2}}
+        <h2 id = "welcome">Welcome user to the Dashboard</h2>
+        <div id = "display-stuff"></div>
+    </body>
+    <script>
+  getApi();
+  async function getApi()
+  {
+      const response = await fetch('../api');
+      const data = await response.json();
+      for(let i = 0;i< data.length;i++)
+      {
+          //document.getElementById("display-stuff").innerHTML = data[0].product
+          var el = document.createElement('p');
+          el.innerHTML = data[i].product;
+          document.getElementById("display-stuff").appendChild(el);
+          var prodImage = document.createElement('img');
+          prodImage.src = "";
+          prodImage.width = 100;
+          prodImage.height = 100;
+          prodImage.src = data[i].avatar;
+          document.getElementById("display-stuff").appendChild(prodImage);
+          var price = document.createElement('p');
+          price.innerHTML = "₹"+data[i].price;
+          document.getElementById("display-stuff").appendChild(price);
+      }
+  }
+  
+    
+
+</script>
+</html>
