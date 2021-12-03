@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const hbs = require('hbs');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 require("./db/conn");
 const Register = require("./models/register");
 const Productadmin = require("./models/productadmin");
@@ -22,6 +22,9 @@ hbs.registerPartials(partial_path);
 app.get('/',(req,res)=>{
     res.render("login");
 })
+app.get("/api/random", (req, res) => {
+    res.json({ message: "Hello from server!" });
+  });
 app.get('/api',(req,res)=>{
     Productadmin.find({})
     .exec((err,data)=>{
